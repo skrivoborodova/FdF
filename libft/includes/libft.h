@@ -99,5 +99,5 @@ int				get_next_line(const int fd, char **line);
 int				ft_get_number(const char *c, size_t *i);
 int				ft_number_length(intmax_t number);
 void			ft_putnbrll(__int64_t n);
-
+size_t			ft_count_words(char const *str, char c);
 #endif

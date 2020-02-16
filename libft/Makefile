@@ -82,7 +82,9 @@ SRC =	src/ft_atoi.c \
 		src/ft_strchri.c \
 		src/get_next_line.c \
 		src/ft_number_length.c \
-		src/ft_putnbrll.c
+		src/ft_get_number.c \
+		src/ft_putnbrll.c \
+		src/ft_count_words.c
 
 OBJ = $(SRC:.c=.o)
 

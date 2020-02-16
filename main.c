@@ -1,36 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbrll.c                                      :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marrow <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/16 16:43:29 by marrow            #+#    #+#             */
-/*   Updated: 2020/02/16 16:43:29 by marrow           ###   ########.fr       */
+/*   Created: 2020/02/16 15:49:18 by marrow            #+#    #+#             */
+/*   Updated: 2020/02/16 15:50:02 by marrow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "fdf.h"
 
-void	ft_putnbrll(__int64_t n)
+int		main(int ac, char **av)
 {
-	if (n > LLONG_MAX || n < LLONG_MIN)
-		return ;
-	if (n == LLONG_MIN)
-	{
-		ft_putstr("-9223372036854775808");
-		return ;
-	}
-	if (n < 0)
-	{
-		n *= -1;
-		ft_putchar('-');
-	}
-	if (n < 10)
-	{
-		ft_putchar(n + '0');
-		return ;
-	}
-	ft_putnbrll(n / 10);
-	ft_putchar((char)((n % 10) + '0'));
+	t_fdf		*data;
+
+	data = (t_fdf *)malloc(sizeof(t_fdf));
+
 }

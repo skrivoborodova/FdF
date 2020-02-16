@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marrow <marrow@student.42.fr>              +#+  +:+       +#+        */
+/*   By: marrow <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/14 00:02:33 by marrow            #+#    #+#             */
-/*   Updated: 2019/09/15 03:16:12 by marrow           ###   ########.fr       */
+/*   Updated: 2020/02/16 16:44:32 by marrow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,26 +24,6 @@ static	size_t	word_start(char const *s, size_t i, char c)
 	while (s[i] && s[i] == c)
 		++i;
 	return (i);
-}
-
-static	size_t	count_words(char const *str, char c)
-{
-	size_t	word;
-	size_t	i;
-
-	i = 0;
-	word = 0;
-	if (!str)
-		return (0);
-	while (str[i])
-	{
-		if (str[i] == c && str[i + 1] != c)
-			word++;
-		i++;
-	}
-	if (str[0] != '\0')
-		word++;
-	return (word);
 }
 
 static char		**free_string(char **result)
@@ -69,7 +49,7 @@ char			**ft_strsplit(char const *s, char c)
 	end = 0;
 	i = 0;
 	if (!s || !(result = (char **)malloc(sizeof(char *)\
-	* (count_words(s, c) + 1))))
+	* (ft_count_words(s, c) + 1))))
 		return (NULL);
 	while (1)
 	{

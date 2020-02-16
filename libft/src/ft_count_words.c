@@ -1,36 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbrll.c                                      :+:      :+:    :+:   */
+/*   ft_count_words.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marrow <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/16 16:43:29 by marrow            #+#    #+#             */
-/*   Updated: 2020/02/16 16:43:29 by marrow           ###   ########.fr       */
+/*   Created: 2020/02/16 16:48:34 by marrow            #+#    #+#             */
+/*   Updated: 2020/02/16 16:49:52 by marrow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbrll(__int64_t n)
+size_t	ft_count_words(char const *str, char c)
 {
-	if (n > LLONG_MAX || n < LLONG_MIN)
-		return ;
-	if (n == LLONG_MIN)
+	size_t	word;
+	size_t	i;
+	size_t	test;
+
+	i = 0;
+	word = 0;
+	test = 0;
+	if (!str)
+		return (0);
+	while (str[i])
 	{
-		ft_putstr("-9223372036854775808");
-		return ;
+		if (test == 1 && str[i] == c)
+			test = 0;
+		if (test == 0 && str[i] != c)
+		{
+			test = 1;
+			word++;
+		}
+		i++;
 	}
-	if (n < 0)
-	{
-		n *= -1;
-		ft_putchar('-');
-	}
-	if (n < 10)
-	{
-		ft_putchar(n + '0');
-		return ;
-	}
-	ft_putnbrll(n / 10);
-	ft_putchar((char)((n % 10) + '0'));
+	return (word);
 }
