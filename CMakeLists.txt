@@ -5,8 +5,6 @@ set(CMAKE_C_STANDARD 11)
 
 include_directories(includes)
 include_directories(libft/includes)
-include_directories(minilibx_macos)
-include_directories(minilibx_mms_20191025_beta)
 
 add_executable(FdF
         includes/fdf.h
@@ -14,6 +12,7 @@ add_executable(FdF
         libft/src/ft_atoi.c
         libft/src/ft_bzero.c
         libft/src/ft_copybyte.c
+        libft/src/ft_count_words.c
         libft/src/ft_create_elem.c
         libft/src/ft_get_number.c
         libft/src/ft_isalnum.c
@@ -80,21 +79,5 @@ add_executable(FdF
         libft/src/ft_tolower.c
         libft/src/ft_toupper.c
         libft/src/get_next_line.c
-        minilibx_macos/font.c
-        minilibx_macos/mlx.h
-        minilibx_macos/mlx_init_loop.m
-        minilibx_macos/mlx_int.h
-        minilibx_macos/mlx_int_str_to_wordtab.c
-        minilibx_macos/mlx_new_image.m
-        minilibx_macos/mlx_new_window.h
-        minilibx_macos/mlx_new_window.m
-        minilibx_macos/mlx_rgb.c
-        minilibx_macos/mlx_shaders.c
-        minilibx_macos/mlx_xpm.c
-        minilibx_mms_20191025_beta/font.c
-        minilibx_mms_20191025_beta/mlx.h
-        minilibx_mms_20191025_beta/mlx_png.c
-        minilibx_mms_20191025_beta/mlx_rgb.c
-        minilibx_mms_20191025_beta/mlx_string_put.c
-        minilibx_mms_20191025_beta/mlx_xpm.c
-        read_file.c)
+        sources/main.c
+        sources/read_file.c)

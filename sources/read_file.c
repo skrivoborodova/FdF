@@ -6,7 +6,7 @@
 /*   By: marrow <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/16 15:40:14 by marrow            #+#    #+#             */
-/*   Updated: 2020/02/16 16:52:37 by marrow           ###   ########.fr       */
+/*   Updated: 2020/02/16 19:00:09 by marrow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,44 @@ int		get_width(char *file_name)
 	close(fd);
 	return(width);
 }
+void 	get_applicata(int *value_str, char *line)
+{
+	char	**split_str;
+	int		i;
+
+	i = 0;
+	split_str = ft_strsplit(line,' ');
+	while (split_str[i])
+	{
+		value_str[i] = ft_atoi(split_str[i]);
+		ft_memdel((void**)split_str[i]);
+		i++;
+	}
+	ft_memdel((void **)split_str);
+}
 void	read_file(char *file_name, t_fdf *data)
 {
+	char	*line;
+    int		fd;
+	int		i;
+
+	i = 0;
 	data->height = get_height(file_name);
+	data->width = get_width(file_name);
+	if (!(data->value = ft_memalloc(sizeof(int *) * (data->height))))
+	    exit(12);
+	while (i <= data->height)
+	{
+		if (!(data->value = ft_memalloc(sizeof(int *) * (data->width))))
+			exit(12);
+		i++;
+	}
+    fd = open(file_name,O_RDONLY);
+	while(get_next_line(fd, &line))
+	{
+		get_applicata(data->value[i], line);
+		free(line);
+		i++;
+	}
+	close(fd);
 }

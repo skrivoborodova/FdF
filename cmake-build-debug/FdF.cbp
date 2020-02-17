@@ -46,8 +46,6 @@
 				<Compiler>
 					<Add directory="/Users/marrow/FdF/includes"/>
 					<Add directory="/Users/marrow/FdF/libft/includes"/>
-					<Add directory="/Users/marrow/FdF/minilibx_macos"/>
-					<Add directory="/Users/marrow/FdF/minilibx_mms_20191025_beta"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -71,8 +69,6 @@
 				<Compiler>
 					<Add directory="/Users/marrow/FdF/includes"/>
 					<Add directory="/Users/marrow/FdF/libft/includes"/>
-					<Add directory="/Users/marrow/FdF/minilibx_macos"/>
-					<Add directory="/Users/marrow/FdF/minilibx_mms_20191025_beta"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -101,6 +97,9 @@
 			<Option target="FdF"/>
 		</Unit>
 		<Unit filename="/Users/marrow/FdF/libft/src/ft_copybyte.c">
+			<Option target="FdF"/>
+		</Unit>
+		<Unit filename="/Users/marrow/FdF/libft/src/ft_count_words.c">
 			<Option target="FdF"/>
 		</Unit>
 		<Unit filename="/Users/marrow/FdF/libft/src/ft_create_elem.c">
@@ -301,58 +300,10 @@
 		<Unit filename="/Users/marrow/FdF/libft/src/get_next_line.c">
 			<Option target="FdF"/>
 		</Unit>
-		<Unit filename="/Users/marrow/FdF/minilibx_macos/font.c">
+		<Unit filename="/Users/marrow/FdF/sources/main.c">
 			<Option target="FdF"/>
 		</Unit>
-		<Unit filename="/Users/marrow/FdF/minilibx_macos/mlx.h">
-			<Option target="FdF"/>
-		</Unit>
-		<Unit filename="/Users/marrow/FdF/minilibx_macos/mlx_init_loop.m">
-			<Option target="FdF"/>
-		</Unit>
-		<Unit filename="/Users/marrow/FdF/minilibx_macos/mlx_int.h">
-			<Option target="FdF"/>
-		</Unit>
-		<Unit filename="/Users/marrow/FdF/minilibx_macos/mlx_int_str_to_wordtab.c">
-			<Option target="FdF"/>
-		</Unit>
-		<Unit filename="/Users/marrow/FdF/minilibx_macos/mlx_new_image.m">
-			<Option target="FdF"/>
-		</Unit>
-		<Unit filename="/Users/marrow/FdF/minilibx_macos/mlx_new_window.h">
-			<Option target="FdF"/>
-		</Unit>
-		<Unit filename="/Users/marrow/FdF/minilibx_macos/mlx_new_window.m">
-			<Option target="FdF"/>
-		</Unit>
-		<Unit filename="/Users/marrow/FdF/minilibx_macos/mlx_rgb.c">
-			<Option target="FdF"/>
-		</Unit>
-		<Unit filename="/Users/marrow/FdF/minilibx_macos/mlx_shaders.c">
-			<Option target="FdF"/>
-		</Unit>
-		<Unit filename="/Users/marrow/FdF/minilibx_macos/mlx_xpm.c">
-			<Option target="FdF"/>
-		</Unit>
-		<Unit filename="/Users/marrow/FdF/minilibx_mms_20191025_beta/font.c">
-			<Option target="FdF"/>
-		</Unit>
-		<Unit filename="/Users/marrow/FdF/minilibx_mms_20191025_beta/mlx.h">
-			<Option target="FdF"/>
-		</Unit>
-		<Unit filename="/Users/marrow/FdF/minilibx_mms_20191025_beta/mlx_png.c">
-			<Option target="FdF"/>
-		</Unit>
-		<Unit filename="/Users/marrow/FdF/minilibx_mms_20191025_beta/mlx_rgb.c">
-			<Option target="FdF"/>
-		</Unit>
-		<Unit filename="/Users/marrow/FdF/minilibx_mms_20191025_beta/mlx_string_put.c">
-			<Option target="FdF"/>
-		</Unit>
-		<Unit filename="/Users/marrow/FdF/minilibx_mms_20191025_beta/mlx_xpm.c">
-			<Option target="FdF"/>
-		</Unit>
-		<Unit filename="/Users/marrow/FdF/read_file.c">
+		<Unit filename="/Users/marrow/FdF/sources/read_file.c">
 			<Option target="FdF"/>
 		</Unit>
 		<Unit filename="/Users/marrow/FdF/CMakeLists.txt">

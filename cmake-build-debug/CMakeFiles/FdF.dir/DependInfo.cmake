@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/marrow/FdF/libft/src/ft_atoi.c" "/Users/marrow/FdF/cmake-build-debug/CMakeFiles/FdF.dir/libft/src/ft_atoi.c.o"
   "/Users/marrow/FdF/libft/src/ft_bzero.c" "/Users/marrow/FdF/cmake-build-debug/CMakeFiles/FdF.dir/libft/src/ft_bzero.c.o"
   "/Users/marrow/FdF/libft/src/ft_copybyte.c" "/Users/marrow/FdF/cmake-build-debug/CMakeFiles/FdF.dir/libft/src/ft_copybyte.c.o"
+  "/Users/marrow/FdF/libft/src/ft_count_words.c" "/Users/marrow/FdF/cmake-build-debug/CMakeFiles/FdF.dir/libft/src/ft_count_words.c.o"
   "/Users/marrow/FdF/libft/src/ft_create_elem.c" "/Users/marrow/FdF/cmake-build-debug/CMakeFiles/FdF.dir/libft/src/ft_create_elem.c.o"
   "/Users/marrow/FdF/libft/src/ft_get_number.c" "/Users/marrow/FdF/cmake-build-debug/CMakeFiles/FdF.dir/libft/src/ft_get_number.c.o"
   "/Users/marrow/FdF/libft/src/ft_isalnum.c" "/Users/marrow/FdF/cmake-build-debug/CMakeFiles/FdF.dir/libft/src/ft_isalnum.c.o"
@@ -73,20 +74,8 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/marrow/FdF/libft/src/ft_tolower.c" "/Users/marrow/FdF/cmake-build-debug/CMakeFiles/FdF.dir/libft/src/ft_tolower.c.o"
   "/Users/marrow/FdF/libft/src/ft_toupper.c" "/Users/marrow/FdF/cmake-build-debug/CMakeFiles/FdF.dir/libft/src/ft_toupper.c.o"
   "/Users/marrow/FdF/libft/src/get_next_line.c" "/Users/marrow/FdF/cmake-build-debug/CMakeFiles/FdF.dir/libft/src/get_next_line.c.o"
-  "/Users/marrow/FdF/minilibx_macos/font.c" "/Users/marrow/FdF/cmake-build-debug/CMakeFiles/FdF.dir/minilibx_macos/font.c.o"
-  "/Users/marrow/FdF/minilibx_macos/mlx_init_loop.m" "/Users/marrow/FdF/cmake-build-debug/CMakeFiles/FdF.dir/minilibx_macos/mlx_init_loop.m.o"
-  "/Users/marrow/FdF/minilibx_macos/mlx_int_str_to_wordtab.c" "/Users/marrow/FdF/cmake-build-debug/CMakeFiles/FdF.dir/minilibx_macos/mlx_int_str_to_wordtab.c.o"
-  "/Users/marrow/FdF/minilibx_macos/mlx_new_image.m" "/Users/marrow/FdF/cmake-build-debug/CMakeFiles/FdF.dir/minilibx_macos/mlx_new_image.m.o"
-  "/Users/marrow/FdF/minilibx_macos/mlx_new_window.m" "/Users/marrow/FdF/cmake-build-debug/CMakeFiles/FdF.dir/minilibx_macos/mlx_new_window.m.o"
-  "/Users/marrow/FdF/minilibx_macos/mlx_rgb.c" "/Users/marrow/FdF/cmake-build-debug/CMakeFiles/FdF.dir/minilibx_macos/mlx_rgb.c.o"
-  "/Users/marrow/FdF/minilibx_macos/mlx_shaders.c" "/Users/marrow/FdF/cmake-build-debug/CMakeFiles/FdF.dir/minilibx_macos/mlx_shaders.c.o"
-  "/Users/marrow/FdF/minilibx_macos/mlx_xpm.c" "/Users/marrow/FdF/cmake-build-debug/CMakeFiles/FdF.dir/minilibx_macos/mlx_xpm.c.o"
-  "/Users/marrow/FdF/minilibx_mms_20191025_beta/font.c" "/Users/marrow/FdF/cmake-build-debug/CMakeFiles/FdF.dir/minilibx_mms_20191025_beta/font.c.o"
-  "/Users/marrow/FdF/minilibx_mms_20191025_beta/mlx_png.c" "/Users/marrow/FdF/cmake-build-debug/CMakeFiles/FdF.dir/minilibx_mms_20191025_beta/mlx_png.c.o"
-  "/Users/marrow/FdF/minilibx_mms_20191025_beta/mlx_rgb.c" "/Users/marrow/FdF/cmake-build-debug/CMakeFiles/FdF.dir/minilibx_mms_20191025_beta/mlx_rgb.c.o"
-  "/Users/marrow/FdF/minilibx_mms_20191025_beta/mlx_string_put.c" "/Users/marrow/FdF/cmake-build-debug/CMakeFiles/FdF.dir/minilibx_mms_20191025_beta/mlx_string_put.c.o"
-  "/Users/marrow/FdF/minilibx_mms_20191025_beta/mlx_xpm.c" "/Users/marrow/FdF/cmake-build-debug/CMakeFiles/FdF.dir/minilibx_mms_20191025_beta/mlx_xpm.c.o"
-  "/Users/marrow/FdF/read_file.c" "/Users/marrow/FdF/cmake-build-debug/CMakeFiles/FdF.dir/read_file.c.o"
+  "/Users/marrow/FdF/sources/main.c" "/Users/marrow/FdF/cmake-build-debug/CMakeFiles/FdF.dir/sources/main.c.o"
+  "/Users/marrow/FdF/sources/read_file.c" "/Users/marrow/FdF/cmake-build-debug/CMakeFiles/FdF.dir/sources/read_file.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 
@@ -94,8 +83,6 @@ set(CMAKE_C_COMPILER_ID "AppleClang")
 set(CMAKE_C_TARGET_INCLUDE_PATH
   "../includes"
   "../libft/includes"
-  "../minilibx_macos"
-  "../minilibx_mms_20191025_beta"
   )
 
 # Targets to which this target links.

@@ -204,6 +204,33 @@ libft/src/ft_copybyte.c.s:
 	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/libft/src/ft_copybyte.c.s
 .PHONY : libft/src/ft_copybyte.c.s
 
+libft/src/ft_count_words.o: libft/src/ft_count_words.c.o
+
+.PHONY : libft/src/ft_count_words.o
+
+# target to build an object file
+libft/src/ft_count_words.c.o:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/libft/src/ft_count_words.c.o
+.PHONY : libft/src/ft_count_words.c.o
+
+libft/src/ft_count_words.i: libft/src/ft_count_words.c.i
+
+.PHONY : libft/src/ft_count_words.i
+
+# target to preprocess a source file
+libft/src/ft_count_words.c.i:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/libft/src/ft_count_words.c.i
+.PHONY : libft/src/ft_count_words.c.i
+
+libft/src/ft_count_words.s: libft/src/ft_count_words.c.s
+
+.PHONY : libft/src/ft_count_words.s
+
+# target to generate assembly for a file
+libft/src/ft_count_words.c.s:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/libft/src/ft_count_words.c.s
+.PHONY : libft/src/ft_count_words.c.s
+
 libft/src/ft_create_elem.o: libft/src/ft_create_elem.c.o
 
 .PHONY : libft/src/ft_create_elem.o
@@ -1986,383 +2013,59 @@ libft/src/get_next_line.c.s:
 	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/libft/src/get_next_line.c.s
 .PHONY : libft/src/get_next_line.c.s
 
-minilibx_macos/font.o: minilibx_macos/font.c.o
+sources/main.o: sources/main.c.o
 
-.PHONY : minilibx_macos/font.o
-
-# target to build an object file
-minilibx_macos/font.c.o:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/minilibx_macos/font.c.o
-.PHONY : minilibx_macos/font.c.o
-
-minilibx_macos/font.i: minilibx_macos/font.c.i
-
-.PHONY : minilibx_macos/font.i
-
-# target to preprocess a source file
-minilibx_macos/font.c.i:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/minilibx_macos/font.c.i
-.PHONY : minilibx_macos/font.c.i
-
-minilibx_macos/font.s: minilibx_macos/font.c.s
-
-.PHONY : minilibx_macos/font.s
-
-# target to generate assembly for a file
-minilibx_macos/font.c.s:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/minilibx_macos/font.c.s
-.PHONY : minilibx_macos/font.c.s
-
-minilibx_macos/mlx_init_loop.o: minilibx_macos/mlx_init_loop.m.o
-
-.PHONY : minilibx_macos/mlx_init_loop.o
+.PHONY : sources/main.o
 
 # target to build an object file
-minilibx_macos/mlx_init_loop.m.o:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/minilibx_macos/mlx_init_loop.m.o
-.PHONY : minilibx_macos/mlx_init_loop.m.o
+sources/main.c.o:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/sources/main.c.o
+.PHONY : sources/main.c.o
 
-minilibx_macos/mlx_init_loop.i: minilibx_macos/mlx_init_loop.m.i
+sources/main.i: sources/main.c.i
 
-.PHONY : minilibx_macos/mlx_init_loop.i
+.PHONY : sources/main.i
 
 # target to preprocess a source file
-minilibx_macos/mlx_init_loop.m.i:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/minilibx_macos/mlx_init_loop.m.i
-.PHONY : minilibx_macos/mlx_init_loop.m.i
+sources/main.c.i:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/sources/main.c.i
+.PHONY : sources/main.c.i
 
-minilibx_macos/mlx_init_loop.s: minilibx_macos/mlx_init_loop.m.s
+sources/main.s: sources/main.c.s
 
-.PHONY : minilibx_macos/mlx_init_loop.s
+.PHONY : sources/main.s
 
 # target to generate assembly for a file
-minilibx_macos/mlx_init_loop.m.s:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/minilibx_macos/mlx_init_loop.m.s
-.PHONY : minilibx_macos/mlx_init_loop.m.s
+sources/main.c.s:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/sources/main.c.s
+.PHONY : sources/main.c.s
 
-minilibx_macos/mlx_int_str_to_wordtab.o: minilibx_macos/mlx_int_str_to_wordtab.c.o
+sources/read_file.o: sources/read_file.c.o
 
-.PHONY : minilibx_macos/mlx_int_str_to_wordtab.o
+.PHONY : sources/read_file.o
 
 # target to build an object file
-minilibx_macos/mlx_int_str_to_wordtab.c.o:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/minilibx_macos/mlx_int_str_to_wordtab.c.o
-.PHONY : minilibx_macos/mlx_int_str_to_wordtab.c.o
+sources/read_file.c.o:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/sources/read_file.c.o
+.PHONY : sources/read_file.c.o
 
-minilibx_macos/mlx_int_str_to_wordtab.i: minilibx_macos/mlx_int_str_to_wordtab.c.i
+sources/read_file.i: sources/read_file.c.i
 
-.PHONY : minilibx_macos/mlx_int_str_to_wordtab.i
-
-# target to preprocess a source file
-minilibx_macos/mlx_int_str_to_wordtab.c.i:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/minilibx_macos/mlx_int_str_to_wordtab.c.i
-.PHONY : minilibx_macos/mlx_int_str_to_wordtab.c.i
-
-minilibx_macos/mlx_int_str_to_wordtab.s: minilibx_macos/mlx_int_str_to_wordtab.c.s
-
-.PHONY : minilibx_macos/mlx_int_str_to_wordtab.s
-
-# target to generate assembly for a file
-minilibx_macos/mlx_int_str_to_wordtab.c.s:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/minilibx_macos/mlx_int_str_to_wordtab.c.s
-.PHONY : minilibx_macos/mlx_int_str_to_wordtab.c.s
-
-minilibx_macos/mlx_new_image.o: minilibx_macos/mlx_new_image.m.o
-
-.PHONY : minilibx_macos/mlx_new_image.o
-
-# target to build an object file
-minilibx_macos/mlx_new_image.m.o:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/minilibx_macos/mlx_new_image.m.o
-.PHONY : minilibx_macos/mlx_new_image.m.o
-
-minilibx_macos/mlx_new_image.i: minilibx_macos/mlx_new_image.m.i
-
-.PHONY : minilibx_macos/mlx_new_image.i
+.PHONY : sources/read_file.i
 
 # target to preprocess a source file
-minilibx_macos/mlx_new_image.m.i:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/minilibx_macos/mlx_new_image.m.i
-.PHONY : minilibx_macos/mlx_new_image.m.i
+sources/read_file.c.i:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/sources/read_file.c.i
+.PHONY : sources/read_file.c.i
 
-minilibx_macos/mlx_new_image.s: minilibx_macos/mlx_new_image.m.s
+sources/read_file.s: sources/read_file.c.s
 
-.PHONY : minilibx_macos/mlx_new_image.s
-
-# target to generate assembly for a file
-minilibx_macos/mlx_new_image.m.s:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/minilibx_macos/mlx_new_image.m.s
-.PHONY : minilibx_macos/mlx_new_image.m.s
-
-minilibx_macos/mlx_new_window.o: minilibx_macos/mlx_new_window.m.o
-
-.PHONY : minilibx_macos/mlx_new_window.o
-
-# target to build an object file
-minilibx_macos/mlx_new_window.m.o:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/minilibx_macos/mlx_new_window.m.o
-.PHONY : minilibx_macos/mlx_new_window.m.o
-
-minilibx_macos/mlx_new_window.i: minilibx_macos/mlx_new_window.m.i
-
-.PHONY : minilibx_macos/mlx_new_window.i
-
-# target to preprocess a source file
-minilibx_macos/mlx_new_window.m.i:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/minilibx_macos/mlx_new_window.m.i
-.PHONY : minilibx_macos/mlx_new_window.m.i
-
-minilibx_macos/mlx_new_window.s: minilibx_macos/mlx_new_window.m.s
-
-.PHONY : minilibx_macos/mlx_new_window.s
+.PHONY : sources/read_file.s
 
 # target to generate assembly for a file
-minilibx_macos/mlx_new_window.m.s:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/minilibx_macos/mlx_new_window.m.s
-.PHONY : minilibx_macos/mlx_new_window.m.s
-
-minilibx_macos/mlx_rgb.o: minilibx_macos/mlx_rgb.c.o
-
-.PHONY : minilibx_macos/mlx_rgb.o
-
-# target to build an object file
-minilibx_macos/mlx_rgb.c.o:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/minilibx_macos/mlx_rgb.c.o
-.PHONY : minilibx_macos/mlx_rgb.c.o
-
-minilibx_macos/mlx_rgb.i: minilibx_macos/mlx_rgb.c.i
-
-.PHONY : minilibx_macos/mlx_rgb.i
-
-# target to preprocess a source file
-minilibx_macos/mlx_rgb.c.i:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/minilibx_macos/mlx_rgb.c.i
-.PHONY : minilibx_macos/mlx_rgb.c.i
-
-minilibx_macos/mlx_rgb.s: minilibx_macos/mlx_rgb.c.s
-
-.PHONY : minilibx_macos/mlx_rgb.s
-
-# target to generate assembly for a file
-minilibx_macos/mlx_rgb.c.s:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/minilibx_macos/mlx_rgb.c.s
-.PHONY : minilibx_macos/mlx_rgb.c.s
-
-minilibx_macos/mlx_shaders.o: minilibx_macos/mlx_shaders.c.o
-
-.PHONY : minilibx_macos/mlx_shaders.o
-
-# target to build an object file
-minilibx_macos/mlx_shaders.c.o:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/minilibx_macos/mlx_shaders.c.o
-.PHONY : minilibx_macos/mlx_shaders.c.o
-
-minilibx_macos/mlx_shaders.i: minilibx_macos/mlx_shaders.c.i
-
-.PHONY : minilibx_macos/mlx_shaders.i
-
-# target to preprocess a source file
-minilibx_macos/mlx_shaders.c.i:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/minilibx_macos/mlx_shaders.c.i
-.PHONY : minilibx_macos/mlx_shaders.c.i
-
-minilibx_macos/mlx_shaders.s: minilibx_macos/mlx_shaders.c.s
-
-.PHONY : minilibx_macos/mlx_shaders.s
-
-# target to generate assembly for a file
-minilibx_macos/mlx_shaders.c.s:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/minilibx_macos/mlx_shaders.c.s
-.PHONY : minilibx_macos/mlx_shaders.c.s
-
-minilibx_macos/mlx_xpm.o: minilibx_macos/mlx_xpm.c.o
-
-.PHONY : minilibx_macos/mlx_xpm.o
-
-# target to build an object file
-minilibx_macos/mlx_xpm.c.o:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/minilibx_macos/mlx_xpm.c.o
-.PHONY : minilibx_macos/mlx_xpm.c.o
-
-minilibx_macos/mlx_xpm.i: minilibx_macos/mlx_xpm.c.i
-
-.PHONY : minilibx_macos/mlx_xpm.i
-
-# target to preprocess a source file
-minilibx_macos/mlx_xpm.c.i:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/minilibx_macos/mlx_xpm.c.i
-.PHONY : minilibx_macos/mlx_xpm.c.i
-
-minilibx_macos/mlx_xpm.s: minilibx_macos/mlx_xpm.c.s
-
-.PHONY : minilibx_macos/mlx_xpm.s
-
-# target to generate assembly for a file
-minilibx_macos/mlx_xpm.c.s:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/minilibx_macos/mlx_xpm.c.s
-.PHONY : minilibx_macos/mlx_xpm.c.s
-
-minilibx_mms_20191025_beta/font.o: minilibx_mms_20191025_beta/font.c.o
-
-.PHONY : minilibx_mms_20191025_beta/font.o
-
-# target to build an object file
-minilibx_mms_20191025_beta/font.c.o:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/minilibx_mms_20191025_beta/font.c.o
-.PHONY : minilibx_mms_20191025_beta/font.c.o
-
-minilibx_mms_20191025_beta/font.i: minilibx_mms_20191025_beta/font.c.i
-
-.PHONY : minilibx_mms_20191025_beta/font.i
-
-# target to preprocess a source file
-minilibx_mms_20191025_beta/font.c.i:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/minilibx_mms_20191025_beta/font.c.i
-.PHONY : minilibx_mms_20191025_beta/font.c.i
-
-minilibx_mms_20191025_beta/font.s: minilibx_mms_20191025_beta/font.c.s
-
-.PHONY : minilibx_mms_20191025_beta/font.s
-
-# target to generate assembly for a file
-minilibx_mms_20191025_beta/font.c.s:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/minilibx_mms_20191025_beta/font.c.s
-.PHONY : minilibx_mms_20191025_beta/font.c.s
-
-minilibx_mms_20191025_beta/mlx_png.o: minilibx_mms_20191025_beta/mlx_png.c.o
-
-.PHONY : minilibx_mms_20191025_beta/mlx_png.o
-
-# target to build an object file
-minilibx_mms_20191025_beta/mlx_png.c.o:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/minilibx_mms_20191025_beta/mlx_png.c.o
-.PHONY : minilibx_mms_20191025_beta/mlx_png.c.o
-
-minilibx_mms_20191025_beta/mlx_png.i: minilibx_mms_20191025_beta/mlx_png.c.i
-
-.PHONY : minilibx_mms_20191025_beta/mlx_png.i
-
-# target to preprocess a source file
-minilibx_mms_20191025_beta/mlx_png.c.i:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/minilibx_mms_20191025_beta/mlx_png.c.i
-.PHONY : minilibx_mms_20191025_beta/mlx_png.c.i
-
-minilibx_mms_20191025_beta/mlx_png.s: minilibx_mms_20191025_beta/mlx_png.c.s
-
-.PHONY : minilibx_mms_20191025_beta/mlx_png.s
-
-# target to generate assembly for a file
-minilibx_mms_20191025_beta/mlx_png.c.s:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/minilibx_mms_20191025_beta/mlx_png.c.s
-.PHONY : minilibx_mms_20191025_beta/mlx_png.c.s
-
-minilibx_mms_20191025_beta/mlx_rgb.o: minilibx_mms_20191025_beta/mlx_rgb.c.o
-
-.PHONY : minilibx_mms_20191025_beta/mlx_rgb.o
-
-# target to build an object file
-minilibx_mms_20191025_beta/mlx_rgb.c.o:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/minilibx_mms_20191025_beta/mlx_rgb.c.o
-.PHONY : minilibx_mms_20191025_beta/mlx_rgb.c.o
-
-minilibx_mms_20191025_beta/mlx_rgb.i: minilibx_mms_20191025_beta/mlx_rgb.c.i
-
-.PHONY : minilibx_mms_20191025_beta/mlx_rgb.i
-
-# target to preprocess a source file
-minilibx_mms_20191025_beta/mlx_rgb.c.i:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/minilibx_mms_20191025_beta/mlx_rgb.c.i
-.PHONY : minilibx_mms_20191025_beta/mlx_rgb.c.i
-
-minilibx_mms_20191025_beta/mlx_rgb.s: minilibx_mms_20191025_beta/mlx_rgb.c.s
-
-.PHONY : minilibx_mms_20191025_beta/mlx_rgb.s
-
-# target to generate assembly for a file
-minilibx_mms_20191025_beta/mlx_rgb.c.s:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/minilibx_mms_20191025_beta/mlx_rgb.c.s
-.PHONY : minilibx_mms_20191025_beta/mlx_rgb.c.s
-
-minilibx_mms_20191025_beta/mlx_string_put.o: minilibx_mms_20191025_beta/mlx_string_put.c.o
-
-.PHONY : minilibx_mms_20191025_beta/mlx_string_put.o
-
-# target to build an object file
-minilibx_mms_20191025_beta/mlx_string_put.c.o:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/minilibx_mms_20191025_beta/mlx_string_put.c.o
-.PHONY : minilibx_mms_20191025_beta/mlx_string_put.c.o
-
-minilibx_mms_20191025_beta/mlx_string_put.i: minilibx_mms_20191025_beta/mlx_string_put.c.i
-
-.PHONY : minilibx_mms_20191025_beta/mlx_string_put.i
-
-# target to preprocess a source file
-minilibx_mms_20191025_beta/mlx_string_put.c.i:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/minilibx_mms_20191025_beta/mlx_string_put.c.i
-.PHONY : minilibx_mms_20191025_beta/mlx_string_put.c.i
-
-minilibx_mms_20191025_beta/mlx_string_put.s: minilibx_mms_20191025_beta/mlx_string_put.c.s
-
-.PHONY : minilibx_mms_20191025_beta/mlx_string_put.s
-
-# target to generate assembly for a file
-minilibx_mms_20191025_beta/mlx_string_put.c.s:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/minilibx_mms_20191025_beta/mlx_string_put.c.s
-.PHONY : minilibx_mms_20191025_beta/mlx_string_put.c.s
-
-minilibx_mms_20191025_beta/mlx_xpm.o: minilibx_mms_20191025_beta/mlx_xpm.c.o
-
-.PHONY : minilibx_mms_20191025_beta/mlx_xpm.o
-
-# target to build an object file
-minilibx_mms_20191025_beta/mlx_xpm.c.o:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/minilibx_mms_20191025_beta/mlx_xpm.c.o
-.PHONY : minilibx_mms_20191025_beta/mlx_xpm.c.o
-
-minilibx_mms_20191025_beta/mlx_xpm.i: minilibx_mms_20191025_beta/mlx_xpm.c.i
-
-.PHONY : minilibx_mms_20191025_beta/mlx_xpm.i
-
-# target to preprocess a source file
-minilibx_mms_20191025_beta/mlx_xpm.c.i:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/minilibx_mms_20191025_beta/mlx_xpm.c.i
-.PHONY : minilibx_mms_20191025_beta/mlx_xpm.c.i
-
-minilibx_mms_20191025_beta/mlx_xpm.s: minilibx_mms_20191025_beta/mlx_xpm.c.s
-
-.PHONY : minilibx_mms_20191025_beta/mlx_xpm.s
-
-# target to generate assembly for a file
-minilibx_mms_20191025_beta/mlx_xpm.c.s:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/minilibx_mms_20191025_beta/mlx_xpm.c.s
-.PHONY : minilibx_mms_20191025_beta/mlx_xpm.c.s
-
-read_file.o: read_file.c.o
-
-.PHONY : read_file.o
-
-# target to build an object file
-read_file.c.o:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/read_file.c.o
-.PHONY : read_file.c.o
-
-read_file.i: read_file.c.i
-
-.PHONY : read_file.i
-
-# target to preprocess a source file
-read_file.c.i:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/read_file.c.i
-.PHONY : read_file.c.i
-
-read_file.s: read_file.c.s
-
-.PHONY : read_file.s
-
-# target to generate assembly for a file
-read_file.c.s:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/read_file.c.s
-.PHONY : read_file.c.s
+sources/read_file.c.s:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/sources/read_file.c.s
+.PHONY : sources/read_file.c.s
 
 # Help Target
 help:
@@ -2382,6 +2085,9 @@ help:
 	@echo "... libft/src/ft_copybyte.o"
 	@echo "... libft/src/ft_copybyte.i"
 	@echo "... libft/src/ft_copybyte.s"
+	@echo "... libft/src/ft_count_words.o"
+	@echo "... libft/src/ft_count_words.i"
+	@echo "... libft/src/ft_count_words.s"
 	@echo "... libft/src/ft_create_elem.o"
 	@echo "... libft/src/ft_create_elem.i"
 	@echo "... libft/src/ft_create_elem.s"
@@ -2580,48 +2286,12 @@ help:
 	@echo "... libft/src/get_next_line.o"
 	@echo "... libft/src/get_next_line.i"
 	@echo "... libft/src/get_next_line.s"
-	@echo "... minilibx_macos/font.o"
-	@echo "... minilibx_macos/font.i"
-	@echo "... minilibx_macos/font.s"
-	@echo "... minilibx_macos/mlx_init_loop.o"
-	@echo "... minilibx_macos/mlx_init_loop.i"
-	@echo "... minilibx_macos/mlx_init_loop.s"
-	@echo "... minilibx_macos/mlx_int_str_to_wordtab.o"
-	@echo "... minilibx_macos/mlx_int_str_to_wordtab.i"
-	@echo "... minilibx_macos/mlx_int_str_to_wordtab.s"
-	@echo "... minilibx_macos/mlx_new_image.o"
-	@echo "... minilibx_macos/mlx_new_image.i"
-	@echo "... minilibx_macos/mlx_new_image.s"
-	@echo "... minilibx_macos/mlx_new_window.o"
-	@echo "... minilibx_macos/mlx_new_window.i"
-	@echo "... minilibx_macos/mlx_new_window.s"
-	@echo "... minilibx_macos/mlx_rgb.o"
-	@echo "... minilibx_macos/mlx_rgb.i"
-	@echo "... minilibx_macos/mlx_rgb.s"
-	@echo "... minilibx_macos/mlx_shaders.o"
-	@echo "... minilibx_macos/mlx_shaders.i"
-	@echo "... minilibx_macos/mlx_shaders.s"
-	@echo "... minilibx_macos/mlx_xpm.o"
-	@echo "... minilibx_macos/mlx_xpm.i"
-	@echo "... minilibx_macos/mlx_xpm.s"
-	@echo "... minilibx_mms_20191025_beta/font.o"
-	@echo "... minilibx_mms_20191025_beta/font.i"
-	@echo "... minilibx_mms_20191025_beta/font.s"
-	@echo "... minilibx_mms_20191025_beta/mlx_png.o"
-	@echo "... minilibx_mms_20191025_beta/mlx_png.i"
-	@echo "... minilibx_mms_20191025_beta/mlx_png.s"
-	@echo "... minilibx_mms_20191025_beta/mlx_rgb.o"
-	@echo "... minilibx_mms_20191025_beta/mlx_rgb.i"
-	@echo "... minilibx_mms_20191025_beta/mlx_rgb.s"
-	@echo "... minilibx_mms_20191025_beta/mlx_string_put.o"
-	@echo "... minilibx_mms_20191025_beta/mlx_string_put.i"
-	@echo "... minilibx_mms_20191025_beta/mlx_string_put.s"
-	@echo "... minilibx_mms_20191025_beta/mlx_xpm.o"
-	@echo "... minilibx_mms_20191025_beta/mlx_xpm.i"
-	@echo "... minilibx_mms_20191025_beta/mlx_xpm.s"
-	@echo "... read_file.o"
-	@echo "... read_file.i"
-	@echo "... read_file.s"
+	@echo "... sources/main.o"
+	@echo "... sources/main.i"
+	@echo "... sources/main.s"
+	@echo "... sources/read_file.o"
+	@echo "... sources/read_file.i"
+	@echo "... sources/read_file.s"
 .PHONY : help
 
 

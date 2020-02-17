@@ -6,5 +6,5 @@ C_FLAGS = -g   -std=gnu11
 
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/marrow/FdF/includes -I/Users/marrow/FdF/libft/includes -I/Users/marrow/FdF/minilibx_macos -I/Users/marrow/FdF/minilibx_mms_20191025_beta 
+C_INCLUDES = -I/Users/marrow/FdF/includes -I/Users/marrow/FdF/libft/includes 
 
