@@ -6,5 +6,5 @@ C_FLAGS = -g   -std=gnu11
 
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/marrow/FdF/includes -I/Users/marrow/FdF/libft/includes 
+C_INCLUDES = -I/Users/oearlene/Desktop/FdF/includes -I/Users/oearlene/Desktop/FdF/libft/includes 
 

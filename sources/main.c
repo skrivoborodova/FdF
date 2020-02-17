@@ -30,9 +30,10 @@ int		main(int ac, char **av)
 		j = 0;
 		while (j < data->width)
 		{
-			printf("%d ", data->value[i][j]);
+			printf("%3d ", data->value[i][j]);
 			j++;
 		}
+		printf("\n");
 		i++;
 	}
 	return (0);
