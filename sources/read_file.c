@@ -6,7 +6,7 @@
 /*   By: oearlene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/16 15:40:14 by marrow            #+#    #+#             */
-/*   Updated: 2020/02/18 02:24:24 by oearlene         ###   ########.fr       */
+/*   Updated: 2020/02/18 04:19:22 by oearlene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@ int		get_width(char *file_name)
 	get_next_line(fd, &line);
 	width = ft_count_words(line,' ');
 	free(line);
-	close(fd);
 	return(width);
 }
 void 	get_applicata(int *value_str, char *line)
@@ -52,10 +51,12 @@ void 	get_applicata(int *value_str, char *line)
 	while (split_str[i])
 	{
 		value_str[i] = ft_atoi(split_str[i]);
-		ft_memdel((void**)&(split_str[i]));
+		//ft_memdel((void**)&(split_str[i]));
+		free(split_str[i]);
 		i++;
 	}
-	ft_memdel((void **)split_str);
+	//ft_memdel((void **)&(split_str[i]));
+	free(split_str);
 }
 void	read_file(char *file_name, t_fdf *data)
 {
@@ -68,13 +69,13 @@ void	read_file(char *file_name, t_fdf *data)
 	data->width = get_width(file_name);
 	if (!(data->value = ft_memalloc(sizeof(int *) * (data->height))))
 		exit(12);
-	while (i <= data->height)
+	while (i < data->height)
 	{
 		if (!(data->value[i] = ft_memalloc(sizeof(int *) * (data->width))))
 			exit(12);
 		i++;
 	}
-	fd = open(file_name,O_RDONLY);
+	fd = open(file_name, O_RDONLY);
 	i = 0;
 	while(get_next_line(fd, &line))
 	{
