@@ -16,7 +16,7 @@
 #include "libft.h"
 //#include "minilibx_macos/mlx.h"
 #include <fcntl.h>
-
+#include <stdio.h>
 
 typedef struct		s_fdf
 {

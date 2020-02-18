@@ -11,6 +11,8 @@ libft.h
 ../includes/libft.h
 fcntl.h
 -
+stdio.h
+-
 
 ../libft/includes/libft.h
 string.h
@@ -20,6 +22,12 @@ unistd.h
 stdlib.h
 -
 limits.h
+-
+
+/Users/marrow/FdF/sources/main.c
+fdf.h
+/Users/marrow/FdF/sources/fdf.h
+stdio.h
 -
 
 /Users/marrow/FdF/sources/read_file.c
