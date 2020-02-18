@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   read_file.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marrow <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: oearlene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/16 15:40:14 by marrow            #+#    #+#             */
-/*   Updated: 2020/02/18 12:26:40 by marrow           ###   ########.fr       */
+/*   Updated: 2020/02/18 23:44:48 by oearlene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,20 +23,20 @@ void		get_height_width(char *file_name, t_fdf *data)
 	while (get_next_line(fd, &line))
 	{
 		if (data->width == 0)
-			data->width = ft_count_words(line,' ');
+			data->width = ft_count_words(line, ' ');
 		data->height++;
 		free(line);
 	}
-	close (fd);
+	close(fd);
 }
 
-void 	get_applicata(int *value_str, char *line)
+void		get_applicata(int *value_str, char *line)
 {
 	char	**split_str;
 	int		i;
 
 	i = 0;
-	split_str = ft_strsplit(line,' ');
+	split_str = ft_strsplit(line, ' ');
 	while (split_str[i])
 	{
 		value_str[i] = ft_atoi(split_str[i]);
@@ -45,25 +45,26 @@ void 	get_applicata(int *value_str, char *line)
 	}
 	ft_memdel((void **)&(split_str));
 }
-void	read_file(char *file_name, t_fdf *data)
+
+void		read_file(char *file_name, t_fdf *data)
 {
 	char	*line;
-    int		fd;
+	int		fd;
 	int		i;
 
 	i = 0;
 	get_height_width(file_name, data);
 	if (!(data->value = ft_memalloc(sizeof(int *) * (data->height))))
-	    exit(12);
+		exit(12);
 	while (i < data->height)
 	{
 		if (!(data->value[i] = ft_memalloc(sizeof(int) * (data->width))))
 			exit(12);
 		i++;
 	}
-    fd = open(file_name, O_RDONLY);
-    i = 0;
-	while(get_next_line(fd, &line))
+	fd = open(file_name, O_RDONLY);
+	i = 0;
+	while (get_next_line(fd, &line))
 	{
 		get_applicata(data->value[i], line);
 		free(line);

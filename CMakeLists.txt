@@ -80,4 +80,4 @@ add_executable(FdF
         libft/src/ft_toupper.c
         libft/src/get_next_line.c
         sources/main.c
-        sources/read_file.c)
+        sources/read_file.c sources/draw.c)
