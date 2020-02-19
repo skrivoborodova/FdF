@@ -6,7 +6,7 @@
 /*   By: oearlene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/16 15:49:18 by marrow            #+#    #+#             */
-/*   Updated: 2020/02/20 00:25:49 by oearlene         ###   ########.fr       */
+/*   Updated: 2020/02/20 01:12:09 by oearlene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ int		main(int ac, char **av)
 
 	data->mlx_ptr = mlx_init();
 	data->win_ptr = mlx_new_window(data->mlx_ptr , 1000, 1000, "FDF");
+	data->zoom = 50;
 
-	draw_line(10, 10, 600, 300, data);
-
+	draw(data);
 	mlx_key_hook(data->win_ptr, deal_key, NULL);
 	mlx_loop(data->mlx_ptr);
 
