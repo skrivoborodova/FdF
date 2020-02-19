@@ -6,7 +6,7 @@
 /*   By: oearlene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/16 06:20:56 by marrow            #+#    #+#             */
-/*   Updated: 2020/02/19 00:05:43 by oearlene         ###   ########.fr       */
+/*   Updated: 2020/02/20 00:20:31 by oearlene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,8 +108,9 @@
 # define FDF_H
 
 # include "libft.h"
-# include "../minilibx_macos/mlx.h"
+# include <mlx.h>
 # include <fcntl.h>
+
 # include <stdio.h>
 
 typedef struct		s_fdf
@@ -118,8 +119,8 @@ typedef struct		s_fdf
 	int				height;
 	int				**value;
 
-	void			**mlx_ptr;
-	void			**win_ptr;
+	void			*mlx_ptr;
+	void			*win_ptr;
 }					t_fdf;
 
 void	read_file(char *file_name, t_fdf *data);

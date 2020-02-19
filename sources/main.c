@@ -6,12 +6,11 @@
 /*   By: oearlene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/16 15:49:18 by marrow            #+#    #+#             */
-/*   Updated: 2020/02/19 00:22:53 by oearlene         ###   ########.fr       */
+/*   Updated: 2020/02/20 00:25:49 by oearlene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
-#include <stdio.h>
 
 int 	deal_key(int key, void *data)
 {
@@ -22,11 +21,7 @@ int 	deal_key(int key, void *data)
 int		main(int ac, char **av)
 {
 	t_fdf		*data;
-	int			i;
-	int 		j;
 
-	i = 0;
-	j = 0;
 	if (ac != 2)
 		ft_putstr("usage: ./fdf <file_name>");
 	data = (t_fdf *)malloc(sizeof(t_fdf));
@@ -40,5 +35,5 @@ int		main(int ac, char **av)
 	mlx_key_hook(data->win_ptr, deal_key, NULL);
 	mlx_loop(data->mlx_ptr);
 
-	return (0);
+
 }
