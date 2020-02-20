@@ -23,9 +23,9 @@ LIB_FT_FILE = $(LIB_FT_DIR)/libft.a
 MINILIBX_DIR = minilibx_macos
 MINILIBX_FILE = $(MINILIBX_DIR)/libmlx.a
 LIB_FT_FLAGS = -L $(LIB_FT_DIR) -lft
-MINILIBX_FLAGS = -L minilibx_macos
+MINILIBX_FLAGS = -L minilibx_macos -lmlx
 
-FRAMEWORKS = -lmlx -framework OpenGL -framework AppKit
+FRAMEWORKS = -framework OpenGL -framework AppKit
 
 O_DIR = objects/
 SRC_DIR = sources/

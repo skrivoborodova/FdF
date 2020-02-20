@@ -6,7 +6,7 @@
 /*   By: oearlene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/16 06:20:56 by marrow            #+#    #+#             */
-/*   Updated: 2020/02/20 01:08:32 by oearlene         ###   ########.fr       */
+/*   Updated: 2020/02/20 17:27:04 by oearlene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,8 +126,15 @@ typedef struct		s_fdf
 	void			*win_ptr;
 }					t_fdf;
 
+typedef struct		s_coord
+{
+	float			x;
+	float			y;
+	float			x1;
+	float			y1;
+}					t_coord;
+
 void	read_file(char *file_name, t_fdf *data);
-void	draw_line(float x, float y, float x1, float y1, t_fdf *data);
 void	draw(t_fdf *data);
 
 #endif
