@@ -6,7 +6,7 @@
 /*   By: oearlene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/16 06:20:56 by marrow            #+#    #+#             */
-/*   Updated: 2020/02/21 00:03:57 by oearlene         ###   ########.fr       */
+/*   Updated: 2020/02/21 00:49:20 by oearlene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,26 +114,28 @@
 
 # include <stdio.h>
 
-typedef struct		s_fdf
+typedef struct	s_fdf
 {
-	int				width;
-	int				height;
-	int				**value;
-	int				zoom;
-	int				color;
+	int			width;
+	int			height;
+	int			**value;
+	int			zoom;
+	int			color;
 
-	void			*mlx_ptr;
-	void			*win_ptr;
-}					t_fdf;
+	void		*mlx_ptr;
+	void		*win_ptr;
+}				t_fdf;
 
-typedef struct		s_coord
+typedef struct	s_coord
 {
-	float			x;
-	float			y;
-}					t_coord;
+	float		x;
+	float		y;
+}				t_coord;
 
-void	read_file(char *file_name, t_fdf *data);
-void	draw_line(t_coord *ptr,float x1,float y1, t_fdf *data);
-void	draw(t_coord *ptr,t_fdf *data);
+void			read_file(char *file_name, t_fdf *data);
+void			draw_line(t_coord *p, float x1, float y1, t_fdf *data);
+void			draw(t_coord *p, t_fdf *data);
+void			choose_colour(t_coord *p, float x1, float y1, t_fdf *data);
+void			zoom(t_coord *p, float *x1, float *y1, t_fdf *data);
 
 #endif
