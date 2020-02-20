@@ -6,7 +6,7 @@
 /*   By: oearlene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/16 06:20:56 by marrow            #+#    #+#             */
-/*   Updated: 2020/02/21 00:49:20 by oearlene         ###   ########.fr       */
+/*   Updated: 2020/02/21 01:52:53 by oearlene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,6 +130,8 @@ typedef struct	s_coord
 {
 	float		x;
 	float		y;
+	int			z;
+	int 		z1;
 }				t_coord;
 
 void			read_file(char *file_name, t_fdf *data);
@@ -137,5 +139,6 @@ void			draw_line(t_coord *p, float x1, float y1, t_fdf *data);
 void			draw(t_coord *p, t_fdf *data);
 void			choose_colour(t_coord *p, float x1, float y1, t_fdf *data);
 void			zoom(t_coord *p, float *x1, float *y1, t_fdf *data);
+void			isometric(float *x, float *y, int z);
 
 #endif

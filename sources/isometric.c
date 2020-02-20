@@ -6,13 +6,13 @@
 /*   By: oearlene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/21 00:44:25 by oearlene          #+#    #+#             */
-/*   Updated: 2020/02/21 00:45:50 by oearlene         ###   ########.fr       */
+/*   Updated: 2020/02/21 01:53:56 by oearlene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
-void		isometric(float *x, float *y, int z)
+void	isometric(float *x, float *y, int z)
 {
 	double	angle;
 

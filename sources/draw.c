@@ -6,7 +6,7 @@
 /*   By: oearlene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 23:49:38 by oearlene          #+#    #+#             */
-/*   Updated: 2020/02/21 00:54:31 by oearlene         ###   ########.fr       */
+/*   Updated: 2020/02/21 01:54:18 by oearlene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ void		draw_line(t_coord *p, float x1, float y1, t_fdf *data)
 	tmp_y = p->y;
 	choose_colour(p, x1, y1, data);
 	zoom(p, &x1, &y1, data);
+	isometric(&(p->x), &(p->y), p->z);
+	isometric(&x1, &y1, p->z1);
 	x_step = x1 - p->x;
 	y_step = y1 - p->y;
 	max = maximum(x_step, y_step);
