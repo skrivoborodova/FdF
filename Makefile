@@ -6,7 +6,7 @@
 #    By: oearlene <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/12/04 20:11:40 by marrow            #+#    #+#              #
-#    Updated: 2020/02/20 00:28:54 by oearlene         ###   ########.fr        #
+#    Updated: 2020/02/20 10:46:15 by marrow           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,8 +20,10 @@ INCLUDES = -I includes -I $(LIB_FT_DIR)/includes
 
 LIB_FT_DIR = libft
 LIB_FT_FILE = $(LIB_FT_DIR)/libft.a
-
+MINILIBX_DIR = minilibx_macos
+MINILIBX_FILE = $(MINILIBX_DIR)/libmlx.a
 LIB_FT_FLAGS = -L $(LIB_FT_DIR) -lft
+MINILIBX_FLAGS = -L minilibx_macos
 
 FRAMEWORKS = -lmlx -framework OpenGL -framework AppKit
 
@@ -38,8 +40,8 @@ O_DIRS = $(patsubst $(SRC_DIR)%, $(O_DIR)%, $(SRC_DIRS))
 
 all: $(NAME)
 
-$(NAME): $(LIB_FT_FILE) $(O_DIRS) $(O_FILES)
-	@clang -o $(NAME) $(FLAGS) $(O_FILES) $(INCLUDES) $(LIB_FT_FLAGS) $(FRAMEWORKS)
+$(NAME): $(LIB_FT_FILE) $(MINILIBX_FILE) $(O_DIRS) $(O_FILES)
+	@clang -o $(NAME) $(FLAGS) $(O_FILES) $(INCLUDES) $(LIB_FT_FLAGS) $(MINILIBX_FLAGS) $(FRAMEWORKS)
 	@echo "make: Done building \`$(NAME)'."
 
 $(O_DIRS):
@@ -47,6 +49,9 @@ $(O_DIRS):
 
 $(LIB_FT_FILE):
 	@make -C $(LIB_FT_DIR)
+
+$(MINILIBX_FILE):
+	@make -C $(MINILIBX_DIR)
 
 $(O_DIR)%.o: $(SRC_DIR)%.c
 	@clang $(FLAGS) $(INCLUDES)  -o $@ -c $<

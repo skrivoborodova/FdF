@@ -59,8 +59,8 @@ void	draw_line(float x, float y, float x1, float y1, t_fdf *data)
 	x1 *= data->zoom;
 	y1 *= data->zoom;
 
-	isometric(&x, &y, z);
-	isometric(&x1, &y1, z1);
+	//isometric(&x, &y, z);
+	//isometric(&x1, &y1, z1);
 	x_step = x1 - x;
 	y_step = y1 - y;
 	max = maximum(x_step, y_step);
