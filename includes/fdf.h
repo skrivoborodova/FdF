@@ -6,7 +6,7 @@
 /*   By: oearlene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/16 06:20:56 by marrow            #+#    #+#             */
-/*   Updated: 2020/02/21 01:52:53 by oearlene         ###   ########.fr       */
+/*   Updated: 2020/02/21 03:52:41 by oearlene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@
 ** colors:
 **  white = 0xffffff
 **  red = 0xe80c0c
+**
 ** ----------------------------
 ** frameworks:
 **  -framework OpenGL -framework AppKit
@@ -114,6 +115,16 @@
 
 # include <stdio.h>
 
+typedef struct	s_coord
+{
+	float		x;
+	float		y;
+	int			z;
+	int 		z1;
+	float		x_step;
+	float		y_step;
+}				t_coord;
+
 typedef struct	s_fdf
 {
 	int			width;
@@ -121,24 +132,20 @@ typedef struct	s_fdf
 	int			**value;
 	int			zoom;
 	int			color;
-
+	int 		shift_x;
+	int 		shift_y;
 	void		*mlx_ptr;
 	void		*win_ptr;
+	t_coord		*p;
 }				t_fdf;
-
-typedef struct	s_coord
-{
-	float		x;
-	float		y;
-	int			z;
-	int 		z1;
-}				t_coord;
 
 void			read_file(char *file_name, t_fdf *data);
 void			draw_line(t_coord *p, float x1, float y1, t_fdf *data);
-void			draw(t_coord *p, t_fdf *data);
+void			draw(t_fdf *data);
 void			choose_colour(t_coord *p, float x1, float y1, t_fdf *data);
 void			zoom(t_coord *p, float *x1, float *y1, t_fdf *data);
 void			isometric(float *x, float *y, int z);
+void			shift(t_coord *p, float *x1, float *y1, t_fdf *data);
+
 
 #endif

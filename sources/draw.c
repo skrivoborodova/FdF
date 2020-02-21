@@ -6,7 +6,7 @@
 /*   By: oearlene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 23:49:38 by oearlene          #+#    #+#             */
-/*   Updated: 2020/02/21 01:54:18 by oearlene         ###   ########.fr       */
+/*   Updated: 2020/02/21 03:39:32 by oearlene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,19 @@ float		maximum(float a, float b)
 		return (b);
 }
 
+void		count_step(t_coord *p, float *x1, float *y1)
+{
+	int		max;
+
+	p->x_step = *x1 - p->x;
+	p->y_step = *y1 - p->y;
+	max = maximum(p->x_step, p->y_step);
+	p->x_step /= max;
+	p->y_step /= max;
+}
+
 void		draw_line(t_coord *p, float x1, float y1, t_fdf *data)
 {
-	float	x_step;
-	float	y_step;
-	int		max;
 	float	tmp_x;
 	float	tmp_y;
 
@@ -44,23 +52,23 @@ void		draw_line(t_coord *p, float x1, float y1, t_fdf *data)
 	zoom(p, &x1, &y1, data);
 	isometric(&(p->x), &(p->y), p->z);
 	isometric(&x1, &y1, p->z1);
-	x_step = x1 - p->x;
-	y_step = y1 - p->y;
-	max = maximum(x_step, y_step);
-	x_step /= max;
-	y_step /= max;
+	shift(p, &x1, &y1, data);
+	count_step(p, &x1, &y1);
 	while ((int)(p->x - x1) || (int)(p->y - y1))
 	{
 		mlx_pixel_put(data->mlx_ptr, data->win_ptr, p->x, p->y, data->color);
-		p->x += x_step;
-		p->y += y_step;
+		p->x += p->x_step;
+		p->y += p->y_step;
 	}
 	p->x = tmp_x;
 	p->y = tmp_y;
 }
 
-void		draw(t_coord *p, t_fdf *data)
+void		draw(t_fdf *data)
 {
+	t_coord		*p;
+
+	p = data->p;
 	p->y = 0;
 	while ((int)p->y < data->height)
 	{
