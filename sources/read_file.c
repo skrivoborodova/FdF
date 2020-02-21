@@ -22,13 +22,14 @@ int			get_height_width(char *file_name, t_fdf *data)
 	data->width = 0;
 	tmp = 0;
 	fd = open(file_name, O_RDONLY);
-	while (get_next_line(fd, &line))
+	tmp = ft_count_words(line, ' ');
+	while (get_next_line(fd, &line) > 0)
 	{
-		tmp = data->width;
+        tmp = data->width;
 		data->width = ft_count_words(line, ' ');
-		if (tmp != data->width)
-			return (0);
 		data->height++;
+        if (tmp != data->width && data->height > 1)
+            return (0);
 		free(line);
 	}
 	close(fd);
@@ -51,24 +52,6 @@ void		get_applicata(int *value_str, char *line)
 	ft_memdel((void **)&(split_str));
 }
 
-int			valid(char *split_str)
-{
-	int 	char_index_minus;
-	int		char_index_plus;
-	int		count_space;
-	int		count_comma;
-
-	char_index_minus = ft_strchri(split_str, '-');
-	char_index_plus = ft_strchri(split_str, '+');
-	count_space = ft_count_words(split_str, ' ');
-	count_comma = ft_count_words(split_str, ',');
-	if (count_space != 0 || count_comma != 2)
-		return (0);
-	if ((char_index_minus != -1 && char_index_minus != 0) || \
-	(char_index_plus != -1 && char_index_plus != 0))
-		return (0);
-	return (1);
-}
 
 int			read_file(char *file_name, t_fdf *data)
 {
@@ -89,10 +72,8 @@ int			read_file(char *file_name, t_fdf *data)
 	}
 	fd = open(file_name, O_RDONLY);
 	i = 0;
-	while (get_next_line(fd, &line))
+	while (get_next_line(fd, &line) > 0)
 	{
-	    if (valid(line) == 0)
-	        return (0);
 		get_applicata(data->value[i], line);
 		free(line);
 		i++;
