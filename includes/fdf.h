@@ -6,40 +6,15 @@
 /*   By: oearlene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/16 06:20:56 by marrow            #+#    #+#             */
-/*   Updated: 2020/02/21 00:03:57 by oearlene         ###   ########.fr       */
+/*   Updated: 2020/02/21 22:57:37 by oearlene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** --------------------- recourses -----------------------------
-** --------------- 3D ------------------------------------------
-**  x` = (x - y) * cos(angle);
-**  y` = (x + y) * sin(angle) - z;
-** -------------------------------------------------------------
-**  ------- mlx_function ----------------------------------------
-**  void *mlx_ptr;
-**  void *win_ptr;
-**
-**  mlx_ptr = mlx_init();
-**  win_ptr = mlx_new_window(mlx_ptr, 1000, 1000, "FDF");
-**
-**  mlx_pixel_put(mlx_ptr, win_ptr, (int)x, (int)y, #color);
-**
-**  mlx_key_hook(win_ptr, deal_key, NULL);
-**  mlx_loop(mlx_ptr);
-** --------------------------------------------------------------
-** ------- deal_key prototype -----------------------------------
-**  int  deal_key(int key, void *data);
-** --------------------------------------------------------------
 ** colors:
 **  white = 0xffffff
 **  red = 0xe80c0c
-** ----------------------------
-** frameworks:
-**  -framework OpenGL -framework AppKit
-** ----------------------------------------------------------------
 */
-
 
 /*
 ** --------------- program structure -----------------------
@@ -114,26 +89,46 @@
 
 # include <stdio.h>
 
-typedef struct		s_fdf
+typedef struct	s_coord
 {
-	int				width;
-	int				height;
-	int				**value;
-	int				zoom;
-	int				color;
+	float		x;
+	float		y;
+	int			z;
+	int 		z1;
+	float		x_step;
+	float		y_step;
+}				t_coord;
 
-	void			*mlx_ptr;
-	void			*win_ptr;
-}					t_fdf;
-
-typedef struct		s_coord
+typedef struct	s_fdf
 {
-	float			x;
-	float			y;
-}					t_coord;
+	int			width;
+	int			height;
+	int			**value;
+	int			zoom;
+	int			color;
+	int 		shift_x;
+	int 		shift_y;
+	int 		projection;
+	void		*mlx_ptr;
+	void		*win_ptr;
+	t_coord		*p;
+}				t_fdf;
+
 
 int		read_file(char *file_name, t_fdf *data);
 void	draw_line(t_coord *ptr,float x1,float y1, t_fdf *data);
 void	draw(t_coord *ptr,t_fdf *data);
+void			read_file(char *file_name, t_fdf *data);
+void			draw_line(t_coord *p, float x1, float y1, t_fdf *data);
+void			draw(t_fdf *data);
+void			choose_colour(t_coord *p, float x1, float y1, t_fdf *data);
+void			zoom(t_coord *p, float *x1, float *y1, t_fdf *data);
+void			isometric(float *x, float *y, int z);
+void			shift(t_coord *p, float *x1, float *y1, t_fdf *data);
+void			key_shift(int key, t_fdf *data);
+void			key_zoom(int key, t_fdf *data);
+void			setup_controls(t_fdf *data);
+void			choose_projection(int key, t_fdf *data);
+void			print_menu(t_fdf *data);
 
 #endif
