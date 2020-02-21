@@ -114,6 +114,10 @@ typedef struct	s_fdf
 	t_coord		*p;
 }				t_fdf;
 
+
+int		read_file(char *file_name, t_fdf *data);
+void	draw_line(t_coord *ptr,float x1,float y1, t_fdf *data);
+void	draw(t_coord *ptr,t_fdf *data);
 void			read_file(char *file_name, t_fdf *data);
 void			draw_line(t_coord *p, float x1, float y1, t_fdf *data);
 void			draw(t_fdf *data);
