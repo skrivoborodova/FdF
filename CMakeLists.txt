@@ -92,4 +92,4 @@ add_executable(FdF
         minilibx_macos/mlx_xpm.c
         sources/draw.c
         sources/main.c
-        sources/read_file.c sources/colour.c sources/isometric.c sources/zoom.c)
+        sources/read_file.c sources/colour.c sources/isometric.c sources/zoom_and_shift.c sources/controls.c)

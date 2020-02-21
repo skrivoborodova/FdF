@@ -6,7 +6,7 @@
 /*   By: oearlene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 23:49:38 by oearlene          #+#    #+#             */
-/*   Updated: 2020/02/21 03:39:32 by oearlene         ###   ########.fr       */
+/*   Updated: 2020/02/21 22:50:19 by oearlene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,11 @@ void		draw_line(t_coord *p, float x1, float y1, t_fdf *data)
 	tmp_y = p->y;
 	choose_colour(p, x1, y1, data);
 	zoom(p, &x1, &y1, data);
-	isometric(&(p->x), &(p->y), p->z);
-	isometric(&x1, &y1, p->z1);
+	if (data->projection == 0)
+	{
+		isometric(&(p->x), &(p->y), p->z);
+		isometric(&x1, &y1, p->z1);
+	}
 	shift(p, &x1, &y1, data);
 	count_step(p, &x1, &y1);
 	while ((int)(p->x - x1) || (int)(p->y - y1))

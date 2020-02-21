@@ -6,28 +6,23 @@
 /*   By: oearlene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/16 15:49:18 by marrow            #+#    #+#             */
-/*   Updated: 2020/02/21 03:52:22 by oearlene         ###   ########.fr       */
+/*   Updated: 2020/02/21 23:06:39 by oearlene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
-int 	deal_key(int key, void *data)
-{
-	printf("%d\n", key);
 /*
-	if (key == 126) //up
-		data->shift_y -= 10;
-	if (key == 125) //down
-		data->shift_y += 10;
-	if (key == 124) //right
-		data->shift_x -= 10;
-	if (key == 123) //left
-		data->shift_x += 10;
-	mlx_clear_window(data->mlx_ptr, data->win_ptr);
-	draw(data);
- */
-	return (0);
+** This function just for Norm
+*/
+
+t_fdf	*new_struct(t_fdf *data)
+{
+	data->shift_x = 150;
+	data->shift_y = 10;
+	data->zoom = 20;
+	data->projection = 0;
+	return (data);
 }
 
 int		main(int ac, char **av)
@@ -39,14 +34,11 @@ int		main(int ac, char **av)
 	data = (t_fdf *)malloc(sizeof(t_fdf));
 	data->p = (t_coord *)malloc(sizeof(t_coord));
 	read_file(av[1], data);
-
+	new_struct(data);
 	data->mlx_ptr = mlx_init();
-	data->win_ptr = mlx_new_window(data->mlx_ptr , 1000, 1000, "FDF");
-
+	data->win_ptr = mlx_new_window(data->mlx_ptr, 1000, 1000, "FDF");
 	draw(data);
-
-	mlx_key_hook(data->win_ptr, deal_key, NULL);
+	setup_controls(data);
 	mlx_loop(data->mlx_ptr);
-
-
+	return (0);
 }
