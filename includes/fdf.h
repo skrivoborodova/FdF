@@ -6,7 +6,7 @@
 /*   By: oearlene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/16 06:20:56 by marrow            #+#    #+#             */
-/*   Updated: 2020/02/21 22:51:26 by oearlene         ###   ########.fr       */
+/*   Updated: 2020/02/21 22:57:37 by oearlene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,5 +125,6 @@ void			key_shift(int key, t_fdf *data);
 void			key_zoom(int key, t_fdf *data);
 void			setup_controls(t_fdf *data);
 void			choose_projection(int key, t_fdf *data);
+void			print_menu(t_fdf *data);
 
 #endif

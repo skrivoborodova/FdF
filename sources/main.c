@@ -6,7 +6,7 @@
 /*   By: oearlene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/16 15:49:18 by marrow            #+#    #+#             */
-/*   Updated: 2020/02/21 23:06:39 by oearlene         ###   ########.fr       */
+/*   Updated: 2020/02/21 23:25:04 by oearlene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,29 @@
 
 t_fdf	*new_struct(t_fdf *data)
 {
-	data->shift_x = 150;
-	data->shift_y = 10;
+	data->shift_x = 450;
+	data->shift_y = 200;
 	data->zoom = 20;
 	data->projection = 0;
 	return (data);
+}
+
+void	print_menu(t_fdf *data)
+{
+	int		y;
+	void	*mlx;
+	void	*win;
+
+	y = 0;
+	mlx = data->mlx_ptr;
+	win = data->win_ptr;
+	mlx_string_put(mlx, win, 65, y += 20, 0xffffff, "How to Use");
+	mlx_string_put(mlx, win, 15, y += 35, 0xffffff, "Zoom: Q for +, E for -");
+	mlx_string_put(mlx, win, 15, y += 30, 0xffffff, "Move: W,S,A,D");
+	mlx_string_put(mlx, win, 15, y += 30, 0xffffff, "Projection");
+	mlx_string_put(mlx, win, 15, y += 30, 0xffffff, "ISO: Z Key");
+	mlx_string_put(mlx, win, 15, y += 30, 0xffffff, "Parallel: X Key");
+	mlx_string_put(mlx, win, 15, y += 30, 0xffffff, "Close: ESC");
 }
 
 int		main(int ac, char **av)
