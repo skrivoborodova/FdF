@@ -132,7 +132,7 @@ typedef struct		s_coord
 	float			y;
 }					t_coord;
 
-void	read_file(char *file_name, t_fdf *data);
+int		read_file(char *file_name, t_fdf *data);
 void	draw_line(t_coord *ptr,float x1,float y1, t_fdf *data);
 void	draw(t_coord *ptr,t_fdf *data);
 

@@ -87,7 +87,7 @@ void	draw_line(t_coord *ptr,float x1,float y1, t_fdf *data)
 	y_step /= max;
 	while ((int)(ptr->x - x1) || (int)(ptr->y - y1))
 	{
-		mlx_pixel_put(data->mlx_ptr, data->win_ptr, ptr->x, ptr->y,0xffffff);
+		mlx_pixel_put(data->mlx_ptr, data->win_ptr, ptr->x, ptr->y,data->color);
 		ptr->x += x_step;
 		ptr->y += y_step;
 	}
