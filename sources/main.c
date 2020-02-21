@@ -53,8 +53,8 @@ int		main(int ac, char **av)
 	data->p = (t_coord *)malloc(sizeof(t_coord));
 	if ((read_file(av[1], data) == 0))
 	{
-	    ft_putstr("error");
-	    return (0);
+		ft_putstr("error");
+		return (0);
 	}
 	new_struct(data);
 	data->mlx_ptr = mlx_init();

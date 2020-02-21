@@ -6,7 +6,7 @@
 /*   By: oearlene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/16 15:40:14 by marrow            #+#    #+#             */
-/*   Updated: 2020/02/19 23:54:46 by oearlene         ###   ########.fr       */
+/*   Updated: 2020/02/22 02:42:37 by oearlene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int			get_height_width(char *file_name, t_fdf *data)
 {
 	char	*line;
 	int		fd;
-	int 	tmp;
+	int		tmp;
 
 	data->height = 0;
 	data->width = 0;
@@ -25,11 +25,11 @@ int			get_height_width(char *file_name, t_fdf *data)
 	tmp = ft_count_words(line, ' ');
 	while (get_next_line(fd, &line) > 0)
 	{
-        tmp = data->width;
+		tmp = data->width;
 		data->width = ft_count_words(line, ' ');
 		data->height++;
-        if (tmp != data->width && data->height > 1)
-            return (0);
+		if (tmp != data->width && data->height > 1)
+			return (0);
 		free(line);
 	}
 	close(fd);
@@ -51,7 +51,6 @@ void		get_applicata(int *value_str, char *line)
 	}
 	ft_memdel((void **)&(split_str));
 }
-
 
 int			read_file(char *file_name, t_fdf *data)
 {
